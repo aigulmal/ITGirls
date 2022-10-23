@@ -37,11 +37,11 @@ public class Fifth {
             case Wednesday:
             case Thursday:
             case Friday:
-                System.out.println("Workday");
+                System.out.println("Workday!");
                 break;
             case Saturday:
             case Sunday:
-                System.out.println("Weekend");
+                System.out.println("Weekend!");
                 break;
         }
     }
