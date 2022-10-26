@@ -49,6 +49,7 @@ public class Sixth {
             System.out.println(i);
         }*/
         //3
+        System.out.println("Введите число n: ");
         Scanner in = new Scanner(System.in);
         int n;
         n = in.nextInt();
@@ -56,6 +57,6 @@ public class Sixth {
         for (int i=1;i<=n;i++){
             factorial*=i;
         }
-        System.out.println(factorial);
+        System.out.println("Факториал числа " +n +" равен "+  factorial);
     }
 }
