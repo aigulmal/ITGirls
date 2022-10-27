@@ -37,7 +37,6 @@ public class Sixth {
         //2
         /*
         int i = 0;
-        System.out.println(i);
         while(i < 50) {
             i++;
             if (i == 4 || i==24){
