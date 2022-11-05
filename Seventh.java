@@ -60,10 +60,8 @@ public class Seventh {
             System.out.println(element);
         }
         System.out.println("Length of names:");
-        for (String length : namesLength)
-        {
-                System.out.println(length);
-        }
+
+                System.out.println(namesLength.toString());
     }
 
 public static void main(String args[])
