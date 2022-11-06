@@ -67,7 +67,10 @@ public class Seventh {
 public static void main(String args[])
 {
     Seventh seventh = new Seventh();
-    //int[] myArray = seventh.CreateArray();
+    //int[] myArray = seventh.CreateArray(); // для первой и второй задачи
+    //seventh.OutputArray(myArray);
+    //seventh.Average(myArray); //1
+    //seventh.Second(myArray); //2
     seventh.Third();
 }
 }
