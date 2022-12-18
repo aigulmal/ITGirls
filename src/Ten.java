@@ -2,7 +2,6 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Ten {
-    //Напиши код, который мог бы копировать строку из одного файла в другой.
     static Scanner scanner = new Scanner(System.in);
     public void writeToFile(Scanner scanner){
         try (FileWriter fileWriter = new FileWriter("10_text.txt")) {
