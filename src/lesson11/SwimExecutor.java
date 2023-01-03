@@ -1,7 +1,7 @@
 package lesson11;
 
 public class SwimExecutor {
-    void makeSwim(Swim swimmable){
+    void makeSwim(Swimmable swimmable){
         swimmable.swim();
     }
 

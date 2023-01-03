@@ -1,6 +1,7 @@
 package lesson11;
 
-public class Fish implements Swim{
+public class
+
     @Override
     public void swim(){
         eat();

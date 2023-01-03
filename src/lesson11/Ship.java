@@ -1,6 +1,6 @@
 package lesson11;
 
-public class Ship implements Swim{
+public class Ship implements Swimmable {
     @Override
     public void swim(){
         fuel();

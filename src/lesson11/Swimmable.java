@@ -1,5 +1,5 @@
 package lesson11;
 
-public interface Swim {
+public interface Swimmable {
     public abstract void swim();
 }
