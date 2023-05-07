@@ -15,6 +15,6 @@ import java.util.Set;
 @Builder
 public class BookCreateDto {
     private String name;
-    private Genre genre;
-    private Set<Author> authors;
+    private Long genreId;
+    //private Set<Author> authors;
 }

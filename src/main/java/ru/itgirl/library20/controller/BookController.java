@@ -22,7 +22,7 @@ public class BookController {
     BookDto createBook (@RequestBody BookCreateDto bookCreateDto) {
         return bookService.createBook(bookCreateDto);
     }
-    @PutMapping("/book/update")
+    @PutMapping("/book/update/{id}")
     BookDto updateBook(@RequestBody BookUpdateDto bookUpdateDto) {
         return bookService.updateBook(bookUpdateDto);
     }

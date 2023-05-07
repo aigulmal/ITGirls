@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.itgirl.library20.model.Author;
+import ru.itgirl.library20.model.Genre;
 
 import java.util.List;
 
