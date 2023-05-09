@@ -39,9 +39,10 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public BookDto updateBook(BookUpdateDto bookUpdateDto) {
+        Genre genre = genreRepository.findById(bookUpdateDto.getGenreId()).orElseThrow();
         Book book = bookRepository.findById(bookUpdateDto.getId()).orElseThrow();
         book.setName(bookUpdateDto.getName());
-        book.setGenre(bookUpdateDto.getGenre());
+        book.setGenre(genre);
         Book savedBook = bookRepository.save(book);
         BookDto bookDto = convertEntityToDto(savedBook);
         return bookDto;
@@ -55,7 +56,8 @@ public class BookServiceImpl implements BookService {
     private Book convertDtoToEntity(BookCreateDto bookCreateDto) {
         return Book.builder()
                 .name(bookCreateDto.getName())
-                .genre(bookCreateDto.getGenreId())
+                //.genre(bookCreateDto.getGenreId())
+                //.genre(bookCreateDto.getGenreId())
                 .build();
     }
 
@@ -74,8 +76,8 @@ public class BookServiceImpl implements BookService {
         return BookDto.builder()
                 .id(book.getId())
                 .name(book.getName())
-                .genre(book.getGenre().getName())
-//                .authors(book.getAuthors()
+                .genre(book.getGenre())
+                        // .authors(book.getAuthors()
 //                        .stream()
 //                        .peek(author -> AuthorDto.builder()
 //                                .name(author.getName())

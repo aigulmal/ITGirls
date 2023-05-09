@@ -16,6 +16,7 @@ import java.util.List;
 public class BookDto {
     private Long id;
     private String name;
-    private String genre;
+    private Genre genre;
+    //private Long genreId;
     //private List<Author> authors;
 }
