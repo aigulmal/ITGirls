@@ -9,11 +9,6 @@ import ru.itgirl.library20.service.BookService;
 @RequiredArgsConstructor
 public class BookController {
     private final BookService bookService;
-
-//    @GetMapping("/book")
-//    BookDto getBookByName(@RequestParam("name") String name) {
-//        return bookService.getByNameV1(name);
-//    }
     @PostMapping("/book/{id}")
     BookDto getBookById(@PathVariable("id") Long id) {
         return bookService.getBookById(id);

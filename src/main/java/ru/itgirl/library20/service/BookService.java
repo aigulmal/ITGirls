@@ -6,7 +6,6 @@ import ru.itgirl.library20.dto.BookDto;
 import ru.itgirl.library20.dto.BookUpdateDto;
 
 public interface BookService {
-
     BookDto getBookById(Long id);
     BookDto createBook(BookCreateDto bookCreateDto);
     BookDto updateBook(BookUpdateDto bookUpdateDto);

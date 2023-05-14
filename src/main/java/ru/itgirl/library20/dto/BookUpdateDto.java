@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import ru.itgirl.library20.model.Author;
 import ru.itgirl.library20.model.Genre;
 
@@ -18,5 +17,4 @@ public class BookUpdateDto {
     private Long id;
     private String name;
     private Long genreId;
-    //private Set<Author> authors;
 }

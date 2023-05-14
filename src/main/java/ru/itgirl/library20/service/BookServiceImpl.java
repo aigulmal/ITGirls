@@ -26,7 +26,6 @@ public class BookServiceImpl implements BookService {
         BookDto bookDto = convertEntityToDto(book);
         return bookDto;
     }
-
     @Override
     public BookDto createBook(BookCreateDto bookCreateDto) {
         Genre genre = genreRepository.findById(bookCreateDto.getGenreId()).orElseThrow();
@@ -36,7 +35,6 @@ public class BookServiceImpl implements BookService {
         BookDto bookDto = convertEntityToDto(book);
         return bookDto;
     }
-
     @Override
     public BookDto updateBook(BookUpdateDto bookUpdateDto) {
         Genre genre = genreRepository.findById(bookUpdateDto.getGenreId()).orElseThrow();
@@ -47,7 +45,6 @@ public class BookServiceImpl implements BookService {
         BookDto bookDto = convertEntityToDto(savedBook);
         return bookDto;
     }
-
     @Override
     public void deleteBook(Long id) {
         bookRepository.deleteById(id);
@@ -56,46 +53,14 @@ public class BookServiceImpl implements BookService {
     private Book convertDtoToEntity(BookCreateDto bookCreateDto) {
         return Book.builder()
                 .name(bookCreateDto.getName())
-                //.genre(bookCreateDto.getGenreId())
-                //.genre(bookCreateDto.getGenreId())
                 .build();
     }
-
     private BookDto convertEntityToDto(Book book) {
-//        List<AuthorDto> authorDtoList = null;
-//        if (book.getAuthors() != null) {
-//           authorDtoList = book.getAuthors()
-//                   .stream()
-//                   .map(author -> AuthorDto.builder()
-//                           .id(author.getId())
-//                           .surname(author.getSurname())
-//                           .name(author.getName())
-//                           .build())
-//                   .toList();
-//        }
+
         return BookDto.builder()
                 .id(book.getId())
                 .name(book.getName())
                 .genre(book.getGenre())
-                        // .authors(book.getAuthors()
-//                        .stream()
-//                        .peek(author -> AuthorDto.builder()
-//                                .name(author.getName())
-//                                .surname(author.getName()))
-//                        .collect(Collectors.toList()))
                 .build();
-//    @Override
-//    public BookDto getByNameV1(String name) {
-//        Book book = bookRepository.findBookByName(name).orElseThrow();
-//        return convertEntityToDto(book);
-//    }
-//    private BookDto convertEntityToDto(Book book) {
-//        return BookDto.builder()
-//                .id(book.getId())
-//                //.genre(book.getGenre().getName())
-//                .name(book.getName())
-//                .build();
-//    }
-
     }
 }
